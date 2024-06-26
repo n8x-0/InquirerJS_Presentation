@@ -6,7 +6,6 @@ import inquirer from "inquirer"
 //we define question , its type and its behavior with an 'object'
 
 let quesObj = {
-    name: "ans",
     message: "whats your name",
     type: "input"
 }
@@ -32,4 +31,14 @@ const comb = await inquirer.prompt(
 console.log(comb.ans);
 
 //=============================================================
-// follow the inq Steps.md file
+// To ask more than one question
+// we know that we can store multiple values in an array similarly we are going to store multiple question objects in an array
+// [ {}, {}, {}... ]
+
+const multiQues = await inquirer.prompt(
+    [
+        {},
+        {},
+        {}
+    ]
+)
